@@ -71,8 +71,8 @@ a.signin-btn:hover, a.signin-btn:focus {  background-color: #f9e259; text-decora
     border-radius: 8px;
     z-index:1000;
     position: absolute;
-    top: 15px;
-    right: 15px;    border: none;
+    top: 7px;
+    right: 7px;    border: none;
     background: none;
 }
 .dialog-cls-btn.hover, a.dialog-cls-btn.focus, .dialog-cls-btn a.hover, a.dialog-cls-btn a.focus {background-color: #f9e259; text-decoration:none;
