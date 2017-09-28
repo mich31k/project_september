@@ -83,7 +83,6 @@ class DatabaseCon {
         }
     }
     
-    //!!!
     public function uploadPhoto($userId, $imagedata, $mimetype, $caption, $story, $credit){
         try {
             
