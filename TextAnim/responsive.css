@@ -1,0 +1,75 @@
+@media only screen and (max-width: 1024px) {
+    .logo-home {
+        background-size: 360px 383px;
+        width: 360px;
+        height: 383px;
+        margin-top: 40px;
+        margin-bottom: 5px;
+    }
+    .logo-text {
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+    .output-container {
+        width: 800px;
+        height: 150px;
+    }
+    a.prime-btn {
+        line-height: 5.2rem;
+        font-size: 2rem;
+        width: 600px;
+        height: 80px;
+    }
+    a.link-btn {
+        width: 299px;
+        font-size: 2rem;
+    }
+    span.separator {
+        height: 30px;
+        margin-top: 40px;
+        width: 2px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .logo-home {
+        background-size: 540px 575px;
+        width: 540px;
+        height: 575px;
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+    .logo-text {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+    .output-container {
+        width: 800px;
+        height: 170px;
+    }
+    a.prime-btn {
+        line-height: 5.2rem;
+        font-size: 2rem;
+        width: 600px;
+        height: 80px;
+    }
+    a.link-btn {
+        width: 299px;
+        font-size: 2rem;
+    }
+    span.separator {
+        height: 30px;
+        margin-top: 40px;
+        width: 2px;
+    }
+    h1 { font-size: 2.3em; }
+}
+@media only screen and (max-width: 768px) {
+    .logo-home {
+        background-size: 360px 383px;
+        width: 360px;
+        height: 383px;
+        margin-top: 40px;
+        margin-bottom: 5px;
+    }
+}

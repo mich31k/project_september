@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="../hide_files/index_data/console_runner.js"></script><script src="../hide_files/index_data/events_runner.js"></script><script src="../hide_files/index_data/css_live_reload.js"></script><meta charset="UTF-8"><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico"><link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111"><link rel="canonical" href="https://codepen.io/gschier/pen/jkivt">
+
+<link rel="stylesheet prefetch" href="../hide_files/index_data/reset.css">
+<style class="cp-pen-styles">html,body {
+  font-family: 'Raleway', sans-serif;
+  padding: 0 2em 1em 2em;
+  font-size: 18px;
+  background: transparent;
+  color: #08767a;
+}
+h1.top-line {
+  width:100%;
+  text-align:center;
+}
+h1.btm-line {
+  margin-bottom:0;
+}
+h1,h2 {
+  font-weight: 200;
+  margin: 0.4em 0;
+}
+h1 { font-size: 1.6em; }
+h1 span.bold { font-weight: 800; }
+h2 {
+  color: #888;
+  font-size: 1.6em;
+}
+
+</style></head><body>
+<link href="../hide_files/index_data/css.css" rel="stylesheet" type="text/css">
+<h1 class="top-line">Welcome to <span class="bold">FOTOGOAT</span></h1>
+<h1 class="btm-line">the photo app that is
+  <span class="txt-rotate bold" data-period="2000" data-rotate="[ &quot;FUN.&quot;, &quot;SIMPLE.&quot;, &quot;CREATIVE.&quot;, &quot;GOAT!&quot; ]"><span class="wrap">simple.</span></span>
+</h1>
+<script src="../hide_files/index_data/stopExecutionOnTimeout.js"></script>
+<script>var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {if (window.CP.shouldStopExecution(1)){break;}
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+window.CP.exitedLoop(1);
+
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #08767a }";
+  document.body.appendChild(css);
+};
+//# sourceURL=pen.js
+</script>
+<style type="text/css">.txt-rotate > .wrap { border-right: 0.08em solid #08767a }</style></body></html>
