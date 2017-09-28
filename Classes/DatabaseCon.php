@@ -168,4 +168,19 @@ class DatabaseCon {
              return FALSE;
         }
     }
+    
+    public function getVoterPhotos($userId, $num){
+        
+        try {
+            $q = $this->db->prepare("CALL getVoterPhotos_Random(:id, :num)");
+            $q->bindValue(':id', $userId);
+            $q->bindValue(':num', $num);
+            $q->execute();
+            return $q->fetchAll();
+        } 
+        catch(PDOException $e) {
+            $this->log[] = $e->getMessage();
+             return FALSE;
+        }
+    }
 }

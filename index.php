@@ -23,7 +23,8 @@ and open the template in the editor.
             //$c->lovePhoto(26);
             
             $num = 4;
-            $photos = $c->getPhotos_random($num);
+            $photos = $c->getPhotosByUser(1, 3);
+            //$photos = $c->getLikedPhotos_random(10);
             if($photos){
                 foreach ($photos as $photo){
                     echo "<img src='data:image/jpeg;base64," . base64_encode($photo->imageData) 

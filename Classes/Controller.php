@@ -38,12 +38,19 @@ class Controller {
         $photos = array();
         foreach ($q as $photo){
             $votes = array();
+            echo $photo['dislikes'];
             $votes['likes'] = new Votes('Likes', $photo['likes']);
             $votes['dislikes'] = new Votes('Dislikes', $photo['dislikes']);
             $votes['funny'] = new Votes('Funny', $photo['funnys']);
             $votes['love'] = new Votes('Love', $photo['loves']);
             
-            $author = new User($photo['authorId'], $photo['authorName']);
+            if($this->CurrentUser->getId() == $photo['authorId']){
+                $author = $this->CurrentUser;
+            }
+            else{
+                $author = new User($photo['authorId'], $photo['authorName']);
+            }
+            
             
             $photos[] = new Photo($photo['id'],
                                     $photo['caption'],
@@ -103,8 +110,6 @@ class Controller {
         else {
             return $this->toObjects_Photos($q);
         }
-        
-        
     }
     
     public function uploadPhoto($caption, $imageData, $mimeType, $story, $credit){
@@ -203,5 +208,15 @@ class Controller {
             }
         }
         return FALSE;
+    }
+    
+    public function getPhotosByUser($userId, $num){
+        if(!$q = $this->dbCon->getVoterPhotos($userId, $num)){
+            //throw new Exception("Error - getPhotosByUser($userId, $num)");
+            return FALSE;
+        }
+        else {
+            return $this->toObjects_Photos($q);
+        }
     }
 }
