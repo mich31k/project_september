@@ -156,9 +156,7 @@ and open the template in the editor.
                 }
                 echo "</tr></table></div></center>";
             }
-        foreach($foto as $photo){
-            var_dump($foto->imageData);
-        }
+        
         ?>
         <!-- <form action="#" 
               method="post" 
