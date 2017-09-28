@@ -123,10 +123,10 @@ class DatabaseCon {
         }
     }
     
-    private function createVote($userId, $photoId, $voteType){
+    private function Vote($userId, $photoId, $voteType){
         try {
             
-            $q = $this->db->prepare("CALL createVote(:userId, :photoId, :voteType)");
+            $q = $this->db->prepare("CALL vote(:userId, :photoId, :voteType)");
             $q->bindValue(':userId', $userId);
             $q->bindValue(':photoId', $photoId);
             $q->bindValue(':voteType', $voteType);
@@ -140,20 +140,20 @@ class DatabaseCon {
         }
     }
 
-    public function createLikeVote($userId, $photoId){
-        return $this->createVote($userId, $photoId, 'like');
+    public function voteLike($userId, $photoId){
+        return $this->vote($userId, $photoId, 'like');
     }
     
-    public function createDislikeVote($userId, $photoId){
-        return $this->createVote($userId, $photoId, 'dislike');
+    public function voteDislike($userId, $photoId){
+        return $this->vote($userId, $photoId, 'dislike');
     }
     
-    public function createLoveVote($userId, $photoId){
-        return $this->createVote($userId, $photoId, 'love');
+    public function voteLove($userId, $photoId){
+        return $this->vote($userId, $photoId, 'love');
     }
     
-    public function createFunnyVote($userId, $photoId){
-        return $this->createVote($userId, $photoId, 'funny');
+    public function voteFunny($userId, $photoId){
+        return $this->vote($userId, $photoId, 'funny');
     }
     
     public function login($email, $password){
