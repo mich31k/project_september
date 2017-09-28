@@ -1,0 +1,133 @@
+body { margin: 0;}
+body.room-editor.editor.state-htmlOn-cssOn-jsOn.layout-top {  margin: 0 !important;  }
+body.layout-top .boxes {  background: transparent url('images/cyan-yellow.jpg');  background-repeat: no-repeat;  background-size: cover;  background-position:center center;  }
+body.layout-top .browse {  background: white;  }
+.clear {clear: both;}
+.logo-home {  background: transparent url('images/fotogoat.png');  background-repeat: no-repeat;  background-size: 270px 287px;  width: 270px;  height: 287px;  margin-left: auto;  margin-right: auto;  margin-top: 30px;  margin-bottom: 5px;  }
+.logo-area {  text-align: center;  width: 100%;  }
+.logo-text {text-align: center;  width: 100%; font-family: Avenir Next, San Francisco Display, sans-serif;}
+.logo-text {  font-size: 2.5rem;  font-weight: 600;  color: #08767a;  line-height: 2.5rem;  margin-bottom: 10px;  }
+.output-area {  margin-left: auto;  margin-right: auto;  }
+.output-container {  width: 565px;  height: 120px;  }
+h1.top-line {  width:100%;  text-align:center;  }
+span.bold {  font-weight: 600;  }
+a.prime-btn { text-decoration: none; text-transform:uppercase; font-family: Avenir Next, San Francisco Display, sans-serif;  line-height: 2.7rem;  font-size: 1.1rem;  font-weight: 600;
+    display: inline-block;  border-radius: 6px; margin-left:auto; margin-right:auto; width:300px; height:40px; background-color: rgba(253, 224, 84,0.8); color: #08767a; box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }
+
+a.prime-btn:hover, a.prime-btn:focus {background-color: #fde054; color: #01b5b5; box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3), 0px 2px 2px 0px rgba(0, 0, 0, 0.28), 0px 4px 2px -2px rgba(0, 0, 0, 0.24); }
+a.prime-btn.med.rt-side {  width: 50%;  float: right;  }
+.button-area {  text-align: center;  width: 100%;  }
+
+a.link-btn { font-weight: 600; text-decoration: none; text-transform: uppercase;  font-family: Avenir Next, San Francisco Display, sans-serif;  color: #08767a;  width: 140px;  display: inline-block;  margin-top: 20px;  font-size: 1.1rem;  }
+a.link-btn:hover, a.link-btn:focus {  color: #18a4a9;  text-decoration: underline; }
+
+span.separator {    background-color: #08767a;  width: 1px;  height: 15px;  margin-top: 20px;  display: inline-block;  }
+
+.header {  width: 100%;  height: 57px;  background-color: #02a5a0;  }
+.small-logo {background: transparent url('images/fotogoat.png');    float: left;  background-repeat: no-repeat;  background-size: 53px 57px;  width: 53px;  height: 57px;  }
+.logo-txt {    font-size: 1.5rem;  text-transform: uppercase;  font-family: Avenir Next, San Francisco Display, sans-serif;  color: #f9e25a;  float: left;  margin-left: 10px;  letter-spacing: 3px;  line-height: 3.7rem !important;  }
+.logo-left {float:left;  width: 23%;  height: 48px;  margin-left: 2%; }
+.filter-area {float:left; text-align:center;  width: 50%;  height: 48px;  }
+.auth-area {float:right;  width: 23%;  margin-right: 2%;  height: 48px;  }
+ul.filters {list-style-type: none;  width: 372px;  margin-left: auto;  margin-right: auto;  margin-top: 3px;  margin-bottom: 0;  }
+ul.filters li {float:left; list-style-type: none;    display: inline-block;  padding-left: 0; margin:0 15px;  height: 48px; }
+ul.filters li.selected, ul.filters li:hover, ul.filters li:focus  {    border-bottom: solid 6px #f9e25a; }
+a.filt-btn { margin: 2px 0 0 0;  background-repeat: no-repeat;  background-size: 44px 44px;  width: 44px;  height: 44px;  display: inline-block;  }
+a.filt-btn.all {  background: transparent url(images/all.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.filt-btn.love {  background: transparent url(images/loveit.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.filt-btn.like {  background: transparent url(images/likeit.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.filt-btn.laugh {  background: transparent url(images/laughit.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.filt-btn.hate {  background: transparent url(images/hateit.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.filt-btn:hover, a.filt-btn:focus {  }
+a.filt-btn.all:hover, a.filt-btn.all:focus {  background: transparent url(images/all_hover.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.filt-btn.love:hover, a.filt-btn.love:focus {  background: transparent url(images/loveit_hover.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.filt-btn.like:hover, a.filt-btn.like:focus {  background: transparent url(images/likeit_hover.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.filt-btn.laugh:hover, a.filt-btn.laugh:focus {  background: transparent url(images/laughit_hover.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.filt-btn.hate:hover, a.filt-btn.hate:focus {  background: transparent url(images/hateit_hover.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+
+a.signin-btn {font-family: Avenir Next, San Francisco Display, sans-serif;text-decoration:none;  color: #f9e259;  font-size: 1.1rem;  float: right;  text-align: center;  padding: 5px 10px;  margin-top: 5px;  line-height: 2.3rem;  border-radius:8px;  }
+a.signin-btn:hover, a.signin-btn:focus {  background-color: #f9e259; text-decoration:none;  color: #08767a; box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3), 0px 2px 2px 0px rgba(0, 0, 0, 0.28), 0px 4px 2px -2px rgba(0, 0, 0, 0.24); }
+
+.dialog-overlay {  position: absolute;  background-size: cover;  background-color: rgba(2,35,30,0.5);  width: 100%;  height: 100%;  }
+.modal-dialog {width:400px; margin-top:30px; margin-left:auto; margin-right:auto;
+    background-color: #02a5a0; border-radius:12px;box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3), 0px 2px 2px 0px rgba(0, 0, 0, 0.28), 0px 4px 2px -2px rgba(0, 0, 0, 0.24);}
+.detail-pic {width:1000px; height: 500px;margin-top:30px; margin-left:auto; margin-right:auto;
+    background-color: #fff; border-radius:12px;box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3), 0px 2px 2px 0px rgba(0, 0, 0, 0.28), 0px 4px 2px -2px rgba(0, 0, 0, 0.24);}
+.detail-area { margin-top: 8px; width:1000px; height: 56px; margin-left:auto; margin-right:auto;
+    background-color: #02a5a0; border-radius:12px;box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3), 0px 2px 2px 0px rgba(0, 0, 0, 0.28), 0px 4px 2px -2px rgba(0, 0, 0, 0.24);}
+.title-area {  float: left;  width: 630px;   font-size: 0.8rem;  color: #f9e259; font-family: Avenir Next, San Francisco Display, sans-serif;  margin-top: 8px;  }
+.vote-area {  width: 350px;  float: left;  }
+.dialog-header {width: 100%; position: relative;}
+.dialog-title {color:#f9e25a; font-size:2.2rem; text-transform:uppercase; letter-spacing:3px; font-weight:600;     margin-left: 30px;
+    margin-top: 15px;  display: inline-block; font-family: Avenir Next, San Francisco Display, sans-serif;    width: auto;  float: left;}
+
+.dialog-cls-btn {font-family: Avenir Next, San Francisco Display, sans-serif;color:#f9e25a;
+    display: inline-block;text-decoration:none;
+    font-size: 2.5rem;
+    line-height: 1rem;
+    padding:5px;     height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 8px;
+    z-index:1000;
+    position: absolute;
+    top: 15px;
+    right: 15px;    border: none;
+    background: none;
+}
+.dialog-cls-btn.hover, a.dialog-cls-btn.focus {background-color: #f9e259; text-decoration:none;
+    color: #08767a;}
+form {padding: 5px 30px 10px 30px;
+    width: 100%;
+    box-sizing: border-box;}
+.label {color:#f9e25a; letter-spacing:2px; font-weight:200;    font-size: 0.8rem;
+   font-family: Avenir Next, San Francisco Display, sans-serif;  }
+input.main-inpt {    margin-bottom: 15px;
+    width: 100%;
+    height: 26px;
+    border-radius: 6px;
+    border-width: 1px;
+}
+input.main-inpt:focus { border-radius: 6px;  outline: #f9e25a auto 3px;  }
+:focus {  outline: #f9e25a auto 3px;  }
+
+.space-10pxno {width:100%; height:10px; display:inline-block;}
+.space-5pxno {width:100%; height:10px; display:inline-block;}
+.welcome-avatar {background: transparent url('images/avatar.png');  background-repeat: no-repeat;  background-size: 45px 45px;  width: 45px;  height: 45px; float: right;  display: inline-block; }
+.welcome-user { text-align: right; margin-right: 6px; float: left;  margin-left: 15px; color:#f9e25a; font-family: Avenir Next, San Francisco Display, sans-serif; font-size: 0.8rem;     line-height: 1.1rem;
+    max-width: 80px;  margin-top: 5px;}
+.auth-div {    float: right;  margin-top: 7px;}
+
+ul.vote-icons {display: inline-block;
+    width: 325px;
+    list-style-type: none;
+    padding-left: 30px;
+    float: left;
+    margin-top: 0;
+}
+ul.vote-icons li {    padding-top: 2px;
+    list-style-type: none;
+    float:left;
+}
+a.vote-icon { margin: 2px 0 0 0;  background-repeat: no-repeat;  background-size: 44px 44px;  width: 44px;  height: 44px;  display: inline-block;  }
+a.vote-icon.love {  background: transparent url(images/loveit.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.vote-icon.like {  background: transparent url(images/likeit.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.vote-icon.laugh {  background: transparent url(images/laughit.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.vote-icon.hate {  background: transparent url(images/hateit.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.vote-icon.love:hover, a.vote-icon.love:focus {  background: transparent url(images/loveit_hover.png);  background-size: 44px 44px;  background-repeat: no-repeat;  border-bottom: solid 6px #f9e25a;  }
+a.vote-icon.like:hover, a.vote-icon.like:focus {  background: transparent url(images/likeit_hover.png);  background-size: 44px 44px;  background-repeat: no-repeat;   border-bottom: solid 6px #f9e25a; }
+a.vote-icon.laugh:hover, a.vote-icon.laugh:focus {  background: transparent url(images/laughit_hover.png);  background-size: 44px 44px;  background-repeat: no-repeat;  border-bottom: solid 6px #f9e25a;  }
+a.vote-icon.hate:hover, a.vote-icon.hate:focus {  background: transparent url(images/hateit_hover.png);  background-size: 44px 44px;  background-repeat: no-repeat;   border-bottom: solid 6px #f9e25a; }
+a.vote-icon.love.selected {  background: transparent url(images/loveit.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.vote-icon.like.selected {  background: transparent url(images/likeit.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.vote-icon.laugh.selected {  background: transparent url(images/laughit.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.vote-icon.hate.selected {  background: transparent url(images/hateit.png);  background-size: 44px 44px;  background-repeat: no-repeat;  }
+a.vote-icon.selected {   border-bottom: solid 6px #f9e25a;  }
+
+.vote-count {font-family: Avenir Next, San Francisco Display, sans-serif;  float: right;  margin: 2px 15px 0 3px;  color: white;    font-size: 0.8rem;  font-weight: 600;  }
+.vote-count.love {color:#fccdf3;  }
+.vote-count.like {color:#a9ffbd;  }
+.vote-count.laugh {color:#6bebf9;  }
+.vote-count.hate {color:#cec9f4;  }
+
+
