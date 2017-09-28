@@ -27,7 +27,7 @@ and open the template in the editor.
 
     <link rel="stylesheet" media="all" href="hide_files/editor.css">
 
-    <link rel="stylesheet" media="all" href="text-anim.css">
+    <link href="fotogoat.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" media="all" href="responsive.css">
 
     <script async="" src="hide_files/analytics.js"></script>

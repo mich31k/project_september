@@ -23,6 +23,8 @@ include 'inc/dbconfig.php';
 <script src="plugins/jquery.gallerie.js"></script>
 <link rel="stylesheet" type="text/css" href="plugins/gallerie.css"/>
 <link rel="stylesheet" type="text/css" href="plugins/gallerie-effects.css"/>
+<link href="fotogoat.css" rel="stylesheet" type="text/css" />
+
 
 <script type="text/javascript">
 $(document).ready(function(){
