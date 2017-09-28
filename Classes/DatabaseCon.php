@@ -131,7 +131,6 @@ class DatabaseCon {
             $q->bindValue(':photoId', $photoId);
             $q->bindValue(':voteType', $voteType);
             $q->execute();
-            
             return TRUE;
         } 
         catch(PDOException $e) {

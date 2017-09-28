@@ -20,6 +20,7 @@ and open the template in the editor.
             $c = new Controller();
             
             $c->signIn('lene@mail.dk', '123456');
+            $c->likePhoto(23);
             
             $num = 4;
             $photos = $c->getPhotos_random($num);
