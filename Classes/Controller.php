@@ -25,7 +25,8 @@ class Controller {
         $this->dbCon = new DatabaseCon();
         $this->CurrentUser = new User(1, "Ole", "Oles mail");
     }
-
+    
+    //!!!!
     private function isLoggedIn(){
         if($this->CurrentUser){
             return TRUE;
