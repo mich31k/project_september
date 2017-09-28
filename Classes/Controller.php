@@ -38,7 +38,6 @@ class Controller {
         $photos = array();
         foreach ($q as $photo){
             $votes = array();
-            echo $photo['dislikes'];
             $votes['likes'] = new Votes('Likes', $photo['likes']);
             $votes['dislikes'] = new Votes('Dislikes', $photo['dislikes']);
             $votes['funny'] = new Votes('Funny', $photo['funnys']);
