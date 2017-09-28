@@ -1,4 +1,5 @@
 <?php
+var_dump($_SESSION['uid']);
 if(!empty($_SESSION['uid']))
 {
 $session_uid=$_SESSION['uid'];
@@ -7,7 +8,7 @@ $userClass = new userClass();
 }
 if(empty($session_uid))
 {
-$url=BASE_URL.'index.php';
+$url=BASE_URL.'index2.php';
 header("Location: $url");
 }
 ?>

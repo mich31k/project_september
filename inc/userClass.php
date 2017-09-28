@@ -31,7 +31,7 @@ echo '{"error":{"text":'. $e->getMessage() .'}}';
 }
 
 /* User Registration */
-public function userRegistration($username,$password,$email,$name)
+public function userRegistration($username,$password,$email)
 {
 try{
 $db = getDB();
@@ -42,15 +42,13 @@ $st->execute();
 $count=$st->rowCount();
 
 if($count<1){
-    $stmt = $db->prepare("INSERT INTO users(username,password,email,name) VALUES (:username,:hash_password,:email,:name)");
+    $stmt = $db->prepare("INSERT INTO users(username,password,email) VALUES (:username,:hash_password,:email)");
     $stmt->bindParam("username", $username,PDO::PARAM_STR) ;
     $hash_password= hash('sha256', $password); //Password encryption
     $stmt->bindParam("hash_password", $hash_password,PDO::PARAM_STR) ;
     $stmt->bindParam("email", $email,PDO::PARAM_STR) ;
-    $stmt->bindParam("name", $name,PDO::PARAM_STR) ;
     $stmt->execute();
     $uid=$db->lastInsertId(); // Last inserted row id
-    var_dump($db);
     $db = null;
     $_SESSION['uid']=$uid;
     return true;
