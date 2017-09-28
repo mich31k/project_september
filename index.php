@@ -4,6 +4,17 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+
+<?php
+    require_once './Classes/DatabaseCon.php';
+    require_once './Classes/Controller.php';
+    require_once './Classes/Photo.php';
+    require_once './Classes/Votes.php';
+                 
+    $c = new Controller();
+?>
+
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -19,20 +30,58 @@ and open the template in the editor.
 
     <div class="filter-area">
         <ul class="filters">
-            <li class="selected">
-                <a class="filt-btn all"></a>
+            
+            <?php
+            $type = "ALL";
+            if($_GET && $_GET['fotoType']){
+                $type = $_GET['fotoType'];
+            }
+            
+            $love = "";
+            $hate = "";
+            $fun = "";
+            $like = "";
+            $all = "";
+            
+            $num = 6;
+            $fotos = NULL;
+            if($type == "LOVE"){
+                $fotos = $c->getLovedPhotos_random($num);
+                $love = " class='selected'";
+            }
+            elseif($type == "HATE"){
+                $fotos = $c->getDislikedPhotos_random($num);
+                $hate = " class='selected'";
+            }
+            elseif($type == "LAUGH"){
+                $fotos = $c->getFunnyPhotos_random($num);
+                $fun = " class='selected'";
+            }
+            elseif($type == "LIKE"){
+                $fotos = $c->getLikedPhotos_random($num);
+                $like = " class='selected'";
+            }
+            else{
+                $fotos = $c->getPhotos_random($num);
+                $all = " class='selected'";
+            }
+            
+            ?>
+            
+            <li <?php echo $all; ?>>
+                <a class="filt-btn all"  href="?fotoType=ALL"></a>
             </li>
-            <li>
-                <a class="filt-btn love"></a>
+            <li <?php echo $love; ?>>
+                <a class="filt-btn love" href="?fotoType=LOVE"></a>
             </li>
-            <li>
-                <a class="filt-btn like"></a>
+            <li <?php echo $like; ?>>
+                <a class="filt-btn like" href="?fotoType=LIKE"></a>
             </li>
-            <li>
-                <a class="filt-btn laugh"></a>
+            <li <?php echo $fun; ?>>
+                <a class="filt-btn laugh" href="?fotoType=LAUGH"></a>
             </li>
-            <li>
-                <a class="filt-btn hate"></a>
+            <li <?php echo $hate; ?>>
+                <a class="filt-btn hate" href="?fotoType=HATE"></a>
             </li>
         </ul>
     </div>
@@ -41,32 +90,17 @@ and open the template in the editor.
     </div>
 </div>
         <?php
-            require_once './Classes/DatabaseCon.php';
-            require_once './Classes/Controller.php';
-            require_once './Classes/Photo.php';
-            require_once './Classes/Votes.php';
-            
-            
-            $c = new Controller();
-            
-            $c->signIn('lene@mail.dk', '123456');
-            //$c->lovePhoto(26);
-            
-            $num = 4;
-            $photos = $c->getPhotosByUser(1, 3);
-            //$photos = $c->getLikedPhotos_random(10);
-            if($photos){
-                foreach ($photos as $photo){
-                    echo "<img src='data:image/jpeg;base64," . base64_encode($photo->imageData) 
+            if($fotos){
+                foreach ($fotos as $foto){
+                    echo "<img src='data:image/jpeg;base64," . base64_encode($foto->imageData) 
                             . "'  style='height: 200px; width: 200px;'/>";
-                    echo "Photo: $photo->id  Author:" . $photo->author->getFirstname() ." => ";
-                    foreach ($photo->votes as $vote){
+                    echo "Photo: $foto->id  Author:" . $foto->author->getFirstname() ." => ";
+                    foreach ($foto->votes as $vote){
                         echo $vote->getType() . ": " . $vote->getNumberOfVotes() . " - ";
                     }
                     echo '<br/>';
                 }
             } 
-            
         ?>
          <form action="#" 
               method="post" 
