@@ -46,7 +46,7 @@
   </div>
 </div>
   <div class="button-area">
-    <a class="prime-btn lrg" href="Browse.html">Browse</a>
+    <a class="prime-btn lrg" href="index2.php">Browse</a>
     <div class="clear"></div>
     <a class="link-btn lrg">Sign Up</a>
     <span class="separator"></span>
