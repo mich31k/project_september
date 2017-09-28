@@ -4,12 +4,16 @@ $session_uid = $_SESSION['uid'];
 var_dump($session_uid);
 include 'inc/dbconfig.php';
 if(empty($session_uid)){
-        echo '<form action="log_reg.php" method="get">
-                <input type="submit" value="Login and Registration" name="Submit" style="position:fixed;top:96%"/>
+        
+        echo'<form action="database_uploader.php">
+                <input type="submit" value="Upload" name="Submit" id="frm1_submit" style="position:fixed;top:90%"/>
             </form>';
-    }else{
         echo '<form action="logout.php" method="get">
                 <input type="submit" value="Logout" name="Submit" id="frm1_submit" style="position:fixed;top:96%"/>
+            </form>';
+    }else{
+        echo '<form action="log_reg.php" method="get">
+                <input type="submit" value="Login and Registration" name="Submit" style="position:fixed;top:96%"/>
             </form>';
     };
 

@@ -1,11 +1,11 @@
 <?php
-include('inc/config.php');
+include('inc/dbconfig.php');
 $session_uid='';
 $_SESSION['uid']=''; 
 if(empty($_SESSION['uid']))
 {
 $url=BASE_URL.'index.php';
-header("Location: index.php");
+header("Location: $url");
 //echo "<script>window.location='$url'</script>";
 }
 ?>

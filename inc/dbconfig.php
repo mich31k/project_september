@@ -1,10 +1,9 @@
 <?php
-
-define('DB_SERVER', '84.19.166.104');
-define('DB_USERNAME', 'c1dbu1');
-define('DB_PASSWORD', 'AMsiF5EB3M');
-define('DB_DATABASE', 'c1db14');
-define("BASE_URL", "http://localhost/photo/"); // Eg. http://yourwebsite.com
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_DATABASE', 'photo');
+define("BASE_URL", "http://localhost/a_galery_project/"); // Eg. http://yourwebsite.com
 
 
 function getDB() 
