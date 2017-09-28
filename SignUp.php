@@ -27,7 +27,7 @@
 
     <link rel="stylesheet" media="all" href="hide_files/editor.css">
 
-    <link rel="stylesheet" media="all" href="text-anim.css">
+    <link rel="stylesheet" media="all" href="fotogoat.css">
     <link rel="stylesheet" media="all" href="responsive.css">
 
     <script async="" src="hide_files/analytics.js"></script>
