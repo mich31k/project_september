@@ -23,7 +23,6 @@ class Controller {
 
     public function __construct() {
         $this->dbCon = new DatabaseCon();
-        $this->CurrentUser = new User(1, "Ole", "Oles mail");
     }
     
     //!!!!
@@ -43,7 +42,7 @@ class Controller {
             $votes['funny'] = new Votes('Funny', $photo['funnys']);
             $votes['love'] = new Votes('Love', $photo['loves']);
             
-            if($this->CurrentUser->getId() == $photo['authorId']){
+            if($this->CurrentUser && $this->CurrentUser->getId() == $photo['authorId']){
                 $author = $this->CurrentUser;
             }
             else{
@@ -200,7 +199,7 @@ class Controller {
                 && DataValidation::str($firstname, 32)
                 && DataValidation::emailAdress($email)
                 && DataValidation::str($password, 128)){
-            
+             echo 'fdsfds';
             if($this->dbCon->createUser($firstname, $email, $password)){
                 $this->signIn($email, $password);
                 return TRUE;

@@ -137,30 +137,27 @@
             <button class="dialog-cls-btn"><a href="index2.php">x</a></button>
         </div>
         <div class="clear"></div>
-        <form>
+        <form action="signUp.php" method="post">
             <div class="input-fld">
                 <div class="label">Username</div>
-                <input class="main-inpt" type="text" />
+                <input class="main-inpt" name="firstname" type="text" />
             </div>
             <div class="input-fld">
                 <div class="label">Email</div>
-                <input class="main-inpt" type="text" />
+                <input class="main-inpt" name="email" type="text" />
             </div>
             <div class="input-fld">
                 <div class="label">Passwords</div>
-                <input class="main-inpt" type="text" />
+                <input class="main-inpt" name="password" type="text" />
             </div>
             <div class="space-5pxno"></div>
             <div class="button-area">
-                <a class="prime-btn med rt-side" href="SignedIn.html">Sign Up</a>
+                <input type="submit" class="prime-btn med rt-side" value="Sign Up">
             </div>
             <div class="space-10pxno"></div>
         </form>
     </div>
 </div>
-
-
-
 </body>
 
 </html>
