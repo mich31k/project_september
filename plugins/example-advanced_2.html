@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="jquery.gallerie.js"></script>
+<link rel="stylesheet" type="text/css" href="gallerie.css"/>
+<link rel="stylesheet" type="text/css" href="gallerie-effects.css"/>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$.ajax('https://secure.flickr.com/services/rest/',{
+		data: {
+			format: 'json',
+			method: 'flickr.interestingness.getList',
+			api_key: '270e736b0e42643aab5aab7819164d84'
+		},
+		dataType: 'jsonp',
+		jsonp: 'jsoncallback'
+	}).done(function(data){
+	
+		var $gallerie = $('#gallery'),
+			$image,
+			$link,
+			base_url,
+			t_url,
+			i_url;
+		
+		$.each(data.photos.photo, function(index, photo){
+			base_url = 'http://farm' + photo.farm + '.static.flickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret;
+			t_url = base_url + '_t.jpg';
+			i_url = base_url + '_b.jpg';  
+			
+			$image = $('<img/>').prop({
+				'src': t_url,
+				'title': photo.title
+			});
+			
+			$link = $('<a/>').prop('href', i_url).append($image);
+			$gallerie.append($link);
+		});
+	
+		$('#gallery').gallerie();
+
+	});
+});
+</script>
+
+<style>
+	body {
+		background-color: black;
+	}
+	
+	#gallery {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#gallery > a {
+		margin: 15px;
+	}
+	
+	#gallery > a img {
+		border: 2px solid #fff;
+		border-radius: 5px;
+		opacity: 0.9;
+	
+		transition: all 500ms;
+		-webkit-transition: all 500ms;
+		-moz-transition: all 500ms;
+		-ms-transition: all 500ms;
+		-o-transition: all 500ms;
+		z-index: 1;
+		position: relative;
+	}
+
+	#gallery > a img:hover {
+		border-color: yellow;
+		opacity: 1.0;
+		transform: scale(1.5);
+		-webkit-transform: scale(1.5);
+		-moz-transform: scale(1.5);
+		-ms-transform: scale(1.5);
+		-o-transform: scale(1.5);
+		z-index: 10;
+	}
+</style>
+</head>
+
+<body>
+<div id="gallery"></div>
+</body>
+</html>
