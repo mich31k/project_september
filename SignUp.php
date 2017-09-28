@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<!--[if lte IE 9]>
+<html class="ie" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
 
 <?php
     require_once './Classes/DatabaseCon.php';
@@ -14,12 +13,13 @@ and open the template in the editor.
     $c = new Controller();
 ?>
 
+<html class="cookie_used_true js mac js" lang="en"><!--<![endif]--><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-<html>
-    <head>
-        <meta charset="UTF-8">
-           <link href="fotogoat.css" rel="stylesheet" type="text/css" />
-        <title>Browse Photos</title>
+    <meta charset="UTF-8">
+
+    <title>Sign Up</title>
+
     <link rel="alternate" type="application/json+oembed" href="https://codepen.io/api/oembed?url=https://codepen.io/gschier/pen/jkivt&amp;format=json" title="Simple Typing Carousel ">
 
 
@@ -31,21 +31,9 @@ and open the template in the editor.
     <link rel="stylesheet" media="all" href="responsive.css">
 
     <script async="" src="hide_files/analytics.js"></script>
-        
-    <script type="text/javascript">
-        $(document).ready(function(){
-                $('#gallery').gallerie();
-        });
 
-    </script>
-<style>
-	
-	#gallery {
-		margin-left: auto;
-		margin-right: auto;
-	}
-</style>
-    </head>
+</head>
+
     <body  class="room-editor editor state-htmlOn-cssOn-jsOn   layout-top     logged-out">
         <div class="header">
     <div class="logo-left">
@@ -141,33 +129,38 @@ and open the template in the editor.
                 echo "</tr></table></div></center>";
             } 
         ?>
-        <!-- <form action="#" 
-              method="post" 
-              id='deform'
-              enctype="multipart/form-data">
-            <fieldset>
-                <legend>Photo</legend>
-            <p>
-                
-                <label>Image:</label><br/>
-                <input type='file' name='img'/>
-            </p>
-            <p>
-               <input type='submit' name='butt'/>
-            </p>
-            </fieldset>
-        </form>-->
         
-        <?php
-            
-           /* if($_POST){
-                $image = file_get_contents($_FILES['img']['tmp_name']);
-                $mime = $_FILES['img']['type'];
-                
-                $c->uploadPhoto("", $image, $mime, "Der var engang", "");
-                //echo "<img src='data:image/jpeg;base64," . base64_encode(file_get_contents($_FILES['img']['tmp_name'])) . "'/>";
-            }*/
-        
-        ?>
-    </body>
+<div class="dialog-overlay">
+    <div class="modal-dialog">
+        <div class="dialog-header">
+            <div class="dialog-title">Sign Up</div>
+            <button class="dialog-cls-btn"><a href="index2.php">x</a></button>
+        </div>
+        <div class="clear"></div>
+        <form>
+            <div class="input-fld">
+                <div class="label">Username</div>
+                <input class="main-inpt" type="text" />
+            </div>
+            <div class="input-fld">
+                <div class="label">Email</div>
+                <input class="main-inpt" type="text" />
+            </div>
+            <div class="input-fld">
+                <div class="label">Passwords</div>
+                <input class="main-inpt" type="text" />
+            </div>
+            <div class="space-5pxno"></div>
+            <div class="button-area">
+                <a class="prime-btn med rt-side" href="SignedIn.html">Sign Up</a>
+            </div>
+            <div class="space-10pxno"></div>
+        </form>
+    </div>
+</div>
+
+
+
+</body>
+
 </html>
