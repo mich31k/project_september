@@ -1,6 +1,7 @@
 <?php
 session_start();
 $session_uid = $_SESSION['uid'];
+var_dump($session_uid);
 include 'inc/dbconfig.php';
 if(empty($session_uid)){
         echo '<form action="log_reg.php" method="get">

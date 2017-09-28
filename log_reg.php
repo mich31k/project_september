@@ -13,7 +13,6 @@ include("inc/dbconfig.php");
 include('inc/userClass.php');
 $userClass = new userClass();
 
-var_dump($_SESSION);
 $errorMsgReg='';
 $errorMsgLogin='';
 /* Login Form */

@@ -3,7 +3,7 @@ define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DB_DATABASE', 'photo');
-define("BASE_URL", "http://localhost/nj/"); // Eg. http://yourwebsite.com
+define("BASE_URL", "http://localhost/photo/"); // Eg. http://yourwebsite.com
 
 
 function getDB() 

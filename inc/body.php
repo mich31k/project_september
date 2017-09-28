@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$query = $DB_con->prepare("SELECT * FROM 
+$query = $db->prepare("SELECT * FROM 
                                 (
                                     SELECT * FROM gallery ORDER BY rand() LIMIT 5
                                 ) T1
