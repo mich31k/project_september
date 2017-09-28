@@ -27,7 +27,7 @@ class Controller {
     }
     
     //!!!!
-    private function isLoggedIn(){
+    public function isLoggedIn(){
         if($this->CurrentUser){
             return TRUE;
         }

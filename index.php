@@ -23,7 +23,7 @@ and open the template in the editor.
             //$c->lovePhoto(26);
             
             $num = 4;
-            $photos = $c->getPhotosByUser(1, 3);
+            $photos = $c->getPhotosByUser(1, 4);
             //$photos = $c->getLikedPhotos_random(10);
             if($photos){
                 foreach ($photos as $photo){
