@@ -62,6 +62,26 @@ class Controller {
         }
         return $photos;
     }
+    
+    private function toObject_Photo($q){
+            $votes['likes'] = new Votes('Likes', $q['likes']);
+            $votes['dislikes'] = new Votes('Dislikes', $q['dislikes']);
+            $votes['funny'] = new Votes('Funny', $q['funnys']);
+            $votes['love'] = new Votes('Love', $q['loves']);
+            
+            $author = new User($q['authorId'], $q['authorName']);
+            
+            $photo = new Photo($q['id'],
+                                    $q['caption'],
+                                    $q['imagedata'],
+                                    $q['mimetype'],
+                                    $q['story'],
+                                    $q['credit'],
+                                    $author,
+                                    $votes); 
+            
+            return $photo;
+    }
 
     public function getPhotos_random($num){
         if(!$q = $this->dbCon->getPhotos_random($num)){
@@ -223,6 +243,16 @@ class Controller {
         }
         else {
             return $this->toObjects_Photos($q);
+        }
+    }
+    
+    public function getPhoto($PhotoId){
+            if(!$q = $this->dbCon->getPhoto($PhotoId)){
+            //throw new Exception("Error - getPhotosByUser($userId, $num)");
+            return FALSE;
+        }
+        else {
+            return $this->toObject_Photo($q);
         }
     }
 }
