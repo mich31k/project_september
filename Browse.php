@@ -9,7 +9,7 @@
         $c = new Controller();
     }
     
-    $num = 5;
+    $num = 12;
     $fotos = array();
 
     if($type == "LOVE"){
