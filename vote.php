@@ -1,3 +1,22 @@
+<html class="cookie_used_true js mac js" lang="en"><!--<![endif]--><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta charset="UTF-8">
+
+    <title>Browse</title>
+
+    <link rel="alternate" type="application/json+oembed" href="https://codepen.io/api/oembed?url=https://codepen.io/gschier/pen/jkivt&amp;format=json" title="Simple Typing Carousel ">
+
+
+    <link rel="stylesheet" media="all" href="hide_files/editor.css">
+
+    <link rel="stylesheet" media="all" href="text-anim.css">
+    <link rel="stylesheet" media="all" href="fotogoat.css">
+    <link rel="stylesheet" media="all" href="responsive.css">
+
+
+</head>
+<body class="room-editor editor state-htmlOn-cssOn-jsOn   layout-top     logged-out">
 <?php
 require_once './Classes/Controller.php';
 require_once './Classes/Photo.php';
@@ -35,8 +54,8 @@ $emo_type = "ALL";
                 voteLike($userId, $photoId);
             }
             
-                foreach ($emos as $foto){
-                    $photoId = $foto->getId();
+                /*foreach ($emos as $emo){
+                    $photoId = $emo->getId();
                     echo "<div>
                         <ul class=filters'>
                         <li <?php echo $all; ?>
@@ -63,7 +82,7 @@ $emo_type = "ALL";
                         echo $vote->getType() . ": " . $vote->getNumberOfVotes() . " - ";
                     }
                     echo '<br/>';
-                }
+                }*/
             
                 
                 
@@ -105,7 +124,6 @@ $emo_type = "ALL";
             }
             else{
                 $fotos = $c->getPhotos_random($num);
-                $all = " class='selected'";
             }
 
             ?>
