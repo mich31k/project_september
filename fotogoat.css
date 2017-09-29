@@ -156,4 +156,40 @@ a.vote-icon.selected {   border-bottom: solid 6px #f9e25a;  }
 .vote-count.laugh {color:#6bebf9;  }
 .vote-count.hate {color:#cec9f4;  }
 
-
+.center-area {
+    text-align: center;
+    display: inline-block;
+}
+.center-pic { background: transparent url(images/cyan-yellow.jpg);
+    background-repeat: no-repeat;
+    max-width: 800px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 5px; }
+a.arrow-left {background-color:rgba(249, 226, 90,0.8); color: #08767a;
+    display: inline-block;
+    position: absolute;
+    top: 38%;
+    left: 10%;
+    font-size: 3rem;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+a.arrow-right {background-color:rgba(249, 226, 90,0.8); color: #08767a;
+    display: inline-block;
+    position: absolute;
+    top: 38%;
+    right: 10%;
+    font-size: 3rem;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+a.arrow-left:hover, a.arrow-left:focus, a.arrow-right:hover, a.arrow-right:focus {text-decoration:none;
+     color: #08767a; box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3), 0px 2px 2px 0px rgba(0, 0, 0, 0.28), 0px 4px 2px -2px rgba(0, 0, 0, 0.24); 
+    }
+    
+.vote-area {margin-left:auto; margin-right:auto; width:140px;     width: 370px;}
