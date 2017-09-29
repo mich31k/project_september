@@ -57,7 +57,7 @@ class Photo {
     }
 
     public function getLikes(){
-        return $this->votes['like']->getNumberOfVotes();
+        return $this->votes['likes']->getNumberOfVotes();
     }
     
     public function getLoves(){
@@ -65,7 +65,7 @@ class Photo {
     } 
     
     public function getDislikes(){
-        return $this->votes['dislike']->getNumberOfVotes();
+        return $this->votes['dislikes']->getNumberOfVotes();
     }
     
     public function getFunnys(){

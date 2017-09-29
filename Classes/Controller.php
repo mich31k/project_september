@@ -152,7 +152,7 @@ class Controller {
         if($this->isLoggedIn()
                 && DataValidation::integer($photoId)){
             
-            $this->dbCon->voteLike($this->CurrentUser->getId(), $photoId);
+            $this->dbCon->voteLike($this->getThisUserId(), $photoId);
             return TRUE;
         }
         else {
@@ -164,7 +164,7 @@ class Controller {
         if($this->isLoggedIn()
                 && DataValidation::integer($photoId)){
             
-            $this->dbCon->voteDislike($this->CurrentUser->getId(), $photoId);
+            $this->dbCon->voteDislike($this->getThisUserId(), $photoId);
             return TRUE;
         }
         else {
@@ -176,7 +176,7 @@ class Controller {
         if($this->isLoggedIn()
                 && DataValidation::integer($photoId)){
             
-            $this->dbCon->voteFunny($this->CurrentUser->getId(), $photoId);
+            $this->dbCon->voteFunny($this->getThisUserId(), $photoId);
             return TRUE;
         }
         else {
@@ -188,7 +188,7 @@ class Controller {
         if($this->isLoggedIn()
                 && DataValidation::integer($photoId)){
             
-            $this->dbCon->voteLove($this->CurrentUser->getId(), $photoId);
+            $this->dbCon->voteLove($this->getThisUserId(), $photoId);
             return TRUE;
         }
         else {

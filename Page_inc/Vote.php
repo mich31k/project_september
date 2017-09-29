@@ -1,13 +1,10 @@
 <?php
 
-$types = array("funny", "like", "dislike", "love");
-
-if(isset($_POST['photoId']) 
-        && isset($_POST['voteType']) 
-        && array_search($_POST['voteType'], $types)){
+if(isset($_GET['fotoid']) 
+        && isset($_GET['votetype'])){
     
-    $photoid = $_POST['photoId'];
-    $type = $_POST['voteType'];
+    $photoId = $_GET['fotoid'];
+    $type = $_GET['votetype'];
     
     require_once dirname(__FILE__, 2) . "/Classes/Controller.php";
     $c = new Controller();
