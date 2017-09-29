@@ -32,7 +32,7 @@
     echo "<center><table><tr>";
     foreach ($fotos as $foto){
         echo "<td><img src='data:" . $foto->getMimeType() . ";base64," . base64_encode($foto->getImagedata()) 
-                            . "'  style='border:1px solid black; max-height: 200px; max-width: 200px; margin-left:3px'/></td>";
+                            . "'  style='border:1px solid #999; max-height: 200px; max-width: 200px; margin-left:3px'/></td>";
         if($i == 3){
             echo "</tr></table><table><tr>";
             $i = 0;
