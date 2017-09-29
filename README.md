@@ -1,2 +1,0 @@
-# project_september
-ccc
