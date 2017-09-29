@@ -10,7 +10,6 @@
 
   <title>Welcome</title>
 
-  <link href="hide_files/css.css" rel="stylesheet">
   <link rel="stylesheet" media="all" href="hide_files/editor.css">
   <link rel="stylesheet" media="all" href="text-anim.css">
   <link rel="stylesheet" media="all" href="fotogoat.css">
