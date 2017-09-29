@@ -31,8 +31,9 @@
     $i = 1;
     echo "<wrapper><center><table><tr>";
     foreach ($fotos as $foto){
-        echo "<td><img src='data:" . $foto->getMimeType() . ";base64," . base64_encode($foto->getImagedata()) 
-                            . "'  style='border:1px solid #999; max-height: 200px; max-width: 200px; margin-left:3px'/></td>";
+        $photoId = $foto->getId();
+        echo "<td><a href='vote.php?'.$photoId.'><img src='data:" . $foto->getMimeType() . ";base64," . base64_encode($foto->getImagedata()) 
+                            . "'  style='border:1px solid #999; max-height: 200px; max-width: 200px; margin-left:3px'/></a></td>";
         if($i == 4){
             echo "</tr></table><table><tr>";
             $i = 0;
