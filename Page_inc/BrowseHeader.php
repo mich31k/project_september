@@ -21,7 +21,6 @@
     <link rel="stylesheet" media="all" href="fotogoat.css">
     <link rel="stylesheet" media="all" href="responsive.css">
 
-    <script async="" src="hide_files/analytics.js"></script>
 
 </head>
 
