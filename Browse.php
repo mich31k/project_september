@@ -29,7 +29,7 @@
     }
     
     $i = 1;
-    echo "<center><table><tr>";
+    echo "<wrapper><center><table><tr>";
     foreach ($fotos as $foto){
         echo "<td><img src='data:" . $foto->getMimeType() . ";base64," . base64_encode($foto->getImagedata()) 
                             . "'  style='border:1px solid #999; max-height: 200px; max-width: 200px; margin-left:3px'/></td>";
@@ -39,6 +39,6 @@
         }
         $i++;
     }
-    echo "</tr></table></center>";
+    echo "</tr></table></center></wrapper>";
     
     include_once './Page_inc/BrowseFooter.php';
