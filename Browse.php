@@ -9,7 +9,7 @@
         $c = new Controller();
     }
     
-    $num = 12;
+    $num = 8;
     $fotos = array();
 
     if($type == "LOVE"){
@@ -33,7 +33,7 @@
     foreach ($fotos as $foto){
         echo "<td><img src='data:" . $foto->getMimeType() . ";base64," . base64_encode($foto->getImagedata()) 
                             . "'  style='border:1px solid #999; max-height: 200px; max-width: 200px; margin-left:3px'/></td>";
-        if($i == 3){
+        if($i == 4){
             echo "</tr></table><table><tr>";
             $i = 0;
         }
